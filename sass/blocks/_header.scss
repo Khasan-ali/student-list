@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header__heading {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.header__btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #1D93FF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+// .header__btn_text {
+
+// }
+
+.header__btn-img {
+    margin-left: 15px;
+    background-color : #fff;
+}

@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
-<body>
-    
 
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__heading">Exam results</h1>
+            <button class="header__btn">
+                <span class="header__btn_text">Add new student</span>
+                <img class="header__btn-img" src="./img/add.png" alt="addjon" width="20" height="30">
+            </button>
+        </header>
+
+        <main class="main">
+            <div class="main__left">
+                <h2 class="main__left-heading">Filter</h2>
+                <form class="main__left-form">
+                    <label class="main__left-label" for="search">Search</label>
+                    <input class="main__left-search" type="text" name="search" placeholder="Falonchi">
+
+                    <label class="main__left-label" for="mark">Mark</label>
+                    <div class="main__left-section">
+                        <input class="main__left-section-input" name="mark" type="number" placeholder="From">
+                        <input class="main__left-section-input" name="mark" type="number" placeholder="To">
+                    </div>
+
+                    <label class="main__left-label" for="sort">Sort by</label>
+                    <select class="main__left-select" name="sort">
+                        <option value="names">Name</option>
+                        <option value="mark">Mark</option>
+                    </select>
+                    <button class="main__left-btn" type="submit">Filter</button>
+                </form>
+            </div>
+            <div class="main__right">
+                <div class="main__right-hero">
+                    <h2 class="main__right-hero-heading">Students list</h2>
+                    <div class="main__hero-section">
+                        <p class="main__right-hero-result">Count: 0</p>
+                        <p class="main__right-marks">Averange mark: 0%</p>
+                    </div>
+                </div>
+                <table class="main__table">
+                    <thead class="main__table-head">
+                        <tr class="main__table-tr">
+                            <th class="main__table-th">Id</th>
+                            <th class="main__table-th">Name & Lastname</th>
+                            <th class="main__table-th">Marked date</th>
+                            <th class="main__table-th">Mark</th>
+                            <th class="main__table-th">Status</th>
+                            <th class="main__table-th">Edit</th>
+                            <th class="main__table-th">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="main__table-body">
+
+                        <tr class="main__table-body-tr">
+                            <td class="main__table-td">1</td>
+                            <td class="main__table-td">Asadbek</td>
+                            <td class="main__table-td">05.12.2021 05:00</td>
+                            <td class="main__table-td">94%</td>
+                            <td class="main__table-td main__table-marc">Pass</td>
+                            <td class="main__table-td">
+                                <img src="./img/pencil.png" alt="deletejon" width="34" height="34">
+                            </td>
+                            <td class="main__table-th">
+                                <img src="./img/delete.png" alt="deletejon" width="34" height="34">
+                            </td>
+                        </tr>
+                        <tr class="main__table-body-tr">
+                            <td class="main__table-td">1</td>
+                            <td class="main__table-td">Asadbek</td>
+                            <td class="main__table-td">05.12.2021 05:00</td>
+                            <td class="main__table-td">94%</td>
+                            <td class="main__table-marc">Pass</td>
+                            <td class="main__table-td">
+                                <img src="./img/pencil.png" alt="deletejon" width="34" height="34">
+                            </td>
+                            <td class="main__table-th">
+                                <img src="./img/delete.png" alt="deletejon" width="34" height="34">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/students.js"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
