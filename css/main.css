@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -57,6 +58,7 @@ img {
   font-weight: 500;
   line-height: normal;
   border: none;
+  cursor: pointer;
 }
 
 .header__btn-img {
@@ -249,4 +251,107 @@ td {
 
 .main__table-markss {
   color: red;
+}
+
+.main__img {
+  cursor: pointer;
+}
+
+.main__modal-sec {
+  position: fixed;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__modal-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  transform: translateY(-100vh);
+  transition: 0.8s;
+}
+
+.blur-hidden {
+  transform: translateY(0);
+}
+
+.main__modal {
+  display: none;
+}
+
+.open-modal .main__modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  max-width: 489px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.main__modal-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  max-width: 445px;
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.main__modal-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 7.5px;
+}
+
+.main__modal-heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.main__modal-close-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.main__modal-label {
+  margin: 24px 0 17px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.main__modal-input {
+  padding: 8px 20px;
+  min-width: 442px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+}
+
+.main__modal-btn {
+  max-width: 442px;
+  width: 100%;
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 8px;
+  background: #1D93FF;
+  border: none;
 }/*# sourceMappingURL=main.css.map */

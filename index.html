@@ -46,8 +46,8 @@
                 <div class="main__right-hero">
                     <h2 class="main__right-hero-heading">Students list</h2>
                     <div class="main__hero-section">
-                        <p class="main__right-hero-result">Count: 0</p>
-                        <p class="main__right-marks">Averange mark: 0%</p>
+                        <p class="main__right-hero-result">Count: <span class="main__count-span"></span></p>
+                        <p class="main__right-marks">Averange mark: <span class="main__mark"></span></p>
                     </div>
                 </div>
                 <table class="main__table">
@@ -66,9 +66,37 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="main__modal-sec">
+                <form class="main__modal">
+                    <div class="main__modal-hero">
+                        <h2 class="main__modal-heading">Add student</h2>
+                        <button class="main__modal-close-btn">
+                            <img src="./img/close.png" alt="closejon" width="24" height="24">
+                        </button>
+
+                    </div>
+
+                    <div class="main__modal-input-section">
+                        <label class="main__modal-label" for="names">Name</label>
+                        <input class="main__modal-input main__modal-name" type="text" name="names"
+                        id="names" placeholder="Falonchi" required>
+
+                        <label class="main__modal-label" for="surname">Lastname</label>
+                        <input class="main__modal-input main__modal-lastname" type="text" name="surname"
+                        id="surname" placeholder="Pismadonchi" required>
+
+                        <label class="main__modal-label" for="mark">Mark</label>
+                        <input class="main__modal-input main__modal-mark" type="number" name="mark" placeholder="150"
+                        id="mark" required>
+
+                    </div>
+                    <button class="main__modal-btn" type="submit">Add student</button>
+                </form>
+            </div>
+            <div class="main__modal-blur"></div>
         </main>
     </div>
-
     <script src="./js/students.js"></script>
     <script src="./js/script.js"></script>
 </body>
