@@ -52,6 +52,7 @@
 
 .main__table-body::before {
     position: absolute;
+    z-index: 2;
     max-width: 970px;
     width: 100%;
     content: "";

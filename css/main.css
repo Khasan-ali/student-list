@@ -29,6 +29,7 @@ img {
 }
 
 .container {
+  position: relative;
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
@@ -216,6 +217,7 @@ img {
 
 .main__table-body::before {
   position: absolute;
+  z-index: 2;
   max-width: 970px;
   width: 100%;
   content: "";
@@ -344,6 +346,68 @@ td {
 }
 
 .main__modal-btn {
+  max-width: 442px;
+  width: 100%;
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 8px;
+  background: #1D93FF;
+  border: none;
+}
+
+.main__change-section {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__change-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  transform: translateY(-100vh);
+  transition: 0.8s;
+}
+
+.blur-hidden {
+  transform: translateY(0);
+}
+
+.main__change {
+  display: none;
+}
+
+.open-modal .main__change {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  max-width: 489px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.main__change-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 7.5px;
+}
+
+.main__change-btn {
   max-width: 442px;
   width: 100%;
   padding: 10px 20px;

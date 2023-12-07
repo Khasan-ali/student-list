@@ -30,8 +30,8 @@
 
                     <label class="main__left-label" for="mark">Mark</label>
                     <div class="main__left-section">
-                        <input class="main__left-section-input" name="mark" type="number" placeholder="From">
-                        <input class="main__left-section-input" name="mark" type="number" placeholder="To">
+                        <input class="main__left-section-input main__small" name="mark" type="number" placeholder="From">
+                        <input class="main__left-section-input main__big" name="mark" type="number" placeholder="To">
                     </div>
 
                     <label class="main__left-label" for="sort">Sort by</label>
@@ -79,22 +79,45 @@
 
                     <div class="main__modal-input-section">
                         <label class="main__modal-label" for="names">Name</label>
-                        <input class="main__modal-input main__modal-name" type="text" name="names"
-                        id="names" placeholder="Falonchi" required>
+                        <input class="main__modal-input main__modal-name" type="text" name="names" id="names"
+                            placeholder="Falonchi" required>
 
                         <label class="main__modal-label" for="surname">Lastname</label>
-                        <input class="main__modal-input main__modal-lastname" type="text" name="surname"
-                        id="surname" placeholder="Pismadonchi" required>
+                        <input class="main__modal-input main__modal-lastname" type="text" name="surname" id="surname"
+                            placeholder="Pismadonchi" required>
 
                         <label class="main__modal-label" for="mark">Mark</label>
                         <input class="main__modal-input main__modal-mark" type="number" name="mark" placeholder="150"
-                        id="mark" required>
-
+                            id="mark" required>
                     </div>
                     <button class="main__modal-btn" type="submit">Add student</button>
                 </form>
             </div>
             <div class="main__modal-blur"></div>
+
+            <!-- CHANGE -->
+            <div class="main__change-section">
+                <form class="main__change">
+                    <div class="main__change-input-section">
+                        <label class="main__modal-label" for="names">Name</label>
+                        <input class="main__modal-input main__change-name" type="text" name="names" id="names"
+                            placeholder="Falonchi" required>
+
+                        <label class="main__modal-label" for="surname">Lastname</label>
+                        <input class="main__modal-input main__change-lastname" type="text" name="surname" id="surname"
+                            placeholder="Pismadonchi" required>
+
+                        <label class="main__modal-label" for="mark">Mark</label>
+                        <input class="main__modal-input main__change-mark" type="number" name="mark" placeholder="150"
+                            id="mark" required>
+
+                    </div>
+                    <button class="main__change-btn" type="submit">Change student</button>
+                </form>
+            </div>
+            <div class="main__change-blur"></div>
+
+
         </main>
     </div>
     <script src="./js/students.js"></script>
