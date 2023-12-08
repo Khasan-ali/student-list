@@ -48,8 +48,16 @@ elHeaderBtn.addEventListener('click', () => {
 elModalClose.addEventListener('click', () => {
     elModalSec.classList.remove('open-modal')
     elModalBlur.classList.remove('blur-hidden')
-
 })
+
+
+document.addEventListener('keydown', function(e) {
+    if(e.keyCode === 27) {
+        
+        elModalSec.classList.remove('open-modal')
+        elModalBlur.classList.remove('blur-hidden')
+    }
+});
 
 elModalBlur.addEventListener('click', () => {
     elModalSec.classList.remove('open-modal')

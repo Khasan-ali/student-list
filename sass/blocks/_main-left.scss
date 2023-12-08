@@ -94,3 +94,13 @@
     border-radius: 8px;
     background: #1D93FF;
 }
+
+
+@media only screen and(width: 600px){
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
