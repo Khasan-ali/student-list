@@ -53,7 +53,6 @@ elModalClose.addEventListener('click', () => {
 
 document.addEventListener('keydown', function(e) {
     if(e.keyCode === 27) {
-        
         elModalSec.classList.remove('open-modal')
         elModalBlur.classList.remove('blur-hidden')
     }
@@ -151,12 +150,23 @@ elSearchForm.addEventListener('submit', (evt) => {
     let markone = searchMarkSmall.value - 0
     let marktwo = searchMarkBig.value - 0
     students.forEach(row => {
-        if((row.name.toLowerCase().includes(inputValue))  && selectValue === 'names') {
+        if((row.name.toLowerCase().includes(inputValue))) {
             return newSearchArr.push(row)
-        }else if((markone <= row.mark) && (row.mark <= marktwo) && selectValue === 'mark') {
+        }else if((markone <= row.mark) && (row.mark <= marktwo)) {
             return newSearchArr.push(row)
         }
     })
+
+    
+    if(selectValue === 'a-z') {
+        students.sort((a, b) => (a.name > b.name) ? 1: -1)
+        elTbody.innerHTML = null
+        renderTable(students, elTbody)
+    }else if(selectValue === 'z-a') {
+        students.sort((a, b) => (a.name > b.name) ? -1: 1)
+        elTbody.innerHTML = null
+        renderTable(students, elTbody)
+    }
 
     elTbody.innerHTML = null
     renderTable(newSearchArr, elTbody)
